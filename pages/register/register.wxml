@@ -1,0 +1,23 @@
+<form bindsubmit="formSubmit" bindreset="formReset">
+<view class="content">
+      <view class="hr"></view>
+      <view class="item">
+         <input type="text" name="loginName" placeholder="请设置4-20位用户名" placeholder-class="holder"
+            bindblur="accountblur" />
+      </view>
+      <view class="item flex">
+         <input type="text" password name="password" placeholder="请设置6-20位登录密码" placeholder-class="holder" />
+      </view>
+      <view class="mobileInfo">
+         <view class="mobile">
+            <input type="text" name="phone" placeholder="请输入手机号" placeholder-class="holder" />
+         </view>
+      </view>
+      <view class="item">
+         <input type="text" name="address" placeholder="请输入联系地址" placeholder-class="holder" />
+      </view>
+      <button class="btn" type="primary" size="default" bindtap="photo">选择你的头像</button>
+      <image class="photo" src="{{src}}" mode="aspectFill"></image>
+      <button class="btn" disabled="{{disabled}}" type="{{btnstate}}" form-type="submit">注册</button>
+      </view>
+    </form>

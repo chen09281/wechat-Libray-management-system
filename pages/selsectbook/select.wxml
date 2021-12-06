@@ -1,0 +1,12 @@
+<form bindsubmit="formSubmit" bindreset="formReset">
+<view class="content">
+    <input type="text" name="id" placeholder="输入id查询书籍信息" bindblur="accountblur"/>
+    <button class="btn"disabled="{{disabled}}" type="{{btnstate}}" form-type="submit">查询</button>
+    <text>id:{{id}}</text>
+    <text>书名:{{name}}</text>
+    <text>isbn:{{isbn}}</text>
+    <text>authors:{{authors}}</text>
+    <text>press:{{press}}</text>
+    <image src="data:image/png;base64,{{photo}}" />
+</view>
+</form>

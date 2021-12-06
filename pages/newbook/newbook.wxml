@@ -1,0 +1,19 @@
+<form bindsubmit="formSubmit" bindreset="formRest">
+    <view class="content">
+        <view item>
+            <input type="text" name="loginName" placeholder="请设置书本id" placeholder-class="holder" bindblur="accountblur" />
+        </view>
+        <view class="item flex">
+            <input type="text" name="name" placeholder="请输入书籍名称" bindblur="accountblur" />
+            <input type="text" name="isbn" placeholder="请输入书籍isbn" bindblur="accpuntblur" />
+            <input type="text" name="authors" placeholder="请输入书籍" bindblur="accpuntblur" />
+            <input type="text" name="press" placeholder="请输入印刷商" bindblur="accpuntblur" />
+            <input type="text" name="price" placeholder="请输入书籍价格" bindblur="accpuntablur" />
+            <input type="text" name="memo" placeholder="输入备忘录" bindblur="accpuntablur" />
+            <button class="btn" type="primary" size="default" bindtap="photo">选择书本封面</button>
+            <image class="photo" src="{{src}}" mode="aspectFill"></image>
+            <button class="btn" disabled="{{disabled}}" type="{{btnstate}}" 
+            form-type="submit">添加</button>
+        </view>
+    </view>
+</form>

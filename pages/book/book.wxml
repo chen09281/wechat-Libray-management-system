@@ -1,0 +1,11 @@
+<!-- <text>作者:{{authors}}</text> -->
+<text>id:{{id}}</text>
+<!-- <text>编号:{{isbn}}</text>
+<text>简介:{{memo}}</text> -->
+<text>书名:{{name}}</text>
+<image src="data:image/png;base64,{{photo}}" />
+<text>出版社:{{press}}</text>
+<text>{{price}}</text>
+<button class="btn" bindtap="submit">新增书籍</button>
+<button class="btn" bindtap="select">查询书籍</button>
+

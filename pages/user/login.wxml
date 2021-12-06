@@ -1,0 +1,20 @@
+<!--pages/login/login.wxml-->
+<form bindsubmit="formSubmit" bindreset="formReset">
+   <view class="content">
+      <view class="hr"></view>
+      <view class="login">
+      <view class="block">
+      <view class="item">
+         <input type="text" name="loginName" placeholder="请输入用户名" placeholder-class="holder"
+            bindblur="accountblur" />
+      </view>
+      <view class="item flex">
+         <input type="text" password name="password" placeholder="请输入登录密码" placeholder-class="holder" />
+      </view>
+      <button class="btn" disabled="{{disabled}}" type="{{btnstate}}" form-type="submit">登录</button>
+      <button class="btn" type="primary" bindtap="register">注册</button>
+   </view>
+</view>
+</view>
+</form>
+
