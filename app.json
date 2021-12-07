@@ -1,11 +1,20 @@
 {
   "pages":[
-
-    "pages/addbook/addbook",
-    "pages/book/book",
     "pages/select/book",
-    "pages/selsectbook/select",
+    "pages/book/book",
+    "pages/addbook/addbook",
+
     "pages/user/login",
+ 
+
+    "pages/selsectbook/select",
+    "pages/addnote/add",
+
+
+
+
+
+
     "pages/newbook/newbook",
     "pages/register/register",
     "pages/me/me",
