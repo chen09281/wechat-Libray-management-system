@@ -1,7 +1,7 @@
 <form bindsubmit="formSubmit" bindreset="formReset">
     <view class="content">
         <input type="text" name="id" placeholder="输入要添加内容的书籍id" bindblur="accountblur" />
-        <textarea rows='3' cols='20' placeholder="请输入书籍内容" name="content"></textarea>
+<input type="text" name="content" value="{{text}}" placeholder="请输入要输入的内容" bindblur="accountblur" bindinput="getInput"/>
         <button type="btn" disabled="{{disabled}}" type="{{btnstate}}" form-type="submit">添加</button>
     </view>
 </form>

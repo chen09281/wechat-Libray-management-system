@@ -1,10 +1,7 @@
 const app = getApp()
 Page({
   data: {
-    disabled: true,
-    btnstate: "default",
-    result:'qwerty',
-    src: ''
+    book:''
   },
   // 跳转
   submit:function(e){
@@ -35,15 +32,9 @@ Page({
         console.log(data);
         if (res.data.length > 0) {
           console.log('转跳成功');
-        app.globalData.id = res.data[0].id;
-        app.globalData.name = res.data[0].name;
-        app.globalData.isbn = res.data[0].isbn;
-        app.globalData.photo = res.data[0].photo;
         };
         self.setData({
-          id: app.globalData.id,
-          name:app.globalData.name,
-          photo:app.globalData.photo
+          book:data
         })
       }
     });

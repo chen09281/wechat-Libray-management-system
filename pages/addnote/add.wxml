@@ -1,0 +1,7 @@
+<form bindsubmit="formSubmit" bindreset="formReset">
+<view class="content">
+    <input type="text" name="bookid" placeholder="请输入要添加笔记的书籍id" bindblur="accountblur" />
+    <input type="text" name="note" placeholder="输入笔记" bindblur="accountblur" />
+    <button class="btn" bindtap="submit" form-type="submit">添加</button>
+</view>
+</form>

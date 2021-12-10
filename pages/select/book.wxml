@@ -2,5 +2,6 @@
 <view class="content">
 <input type="text" name="id" placeholder="请输入id查询书籍内容" bindblur="accountblur" />
 <button class="btn" disabled="{{disabled}}" type="{{btnstate}}" form-type="submit">查询</button>
+<text>内容:{{value}}</text>
 </view>
 </form>

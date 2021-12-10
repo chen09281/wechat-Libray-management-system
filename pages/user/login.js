@@ -38,7 +38,7 @@ Page({
       dataType:'json',
       // 成功返回
       success:function(res){
-        // console.log(res.data);
+        console.log(res.data);
         if (res.data.length > 0){
           wx.showToast({
             title: '登陆成功',
@@ -50,11 +50,13 @@ Page({
           app.globalData.phone = res.data[0].phone;
           app.globalData.address = res.data[0].address;
           app.globalData.photo = res.data[0].photo;
+          app.globalData.user_id = res.data[res.data.length-1].id;
           
           // 设置两秒后跳转
           setTimeout(function(){
+            console.log(app.globalData.user_id);
             wx.navigateTo({
-              url: '../book/book',
+              url: '../addnote/add',
             })
           },2000);
         } else {

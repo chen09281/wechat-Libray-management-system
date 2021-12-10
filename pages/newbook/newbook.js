@@ -40,16 +40,7 @@ Page({
 
     // 添加按钮功能
     formSubmit:function(e){
-        var book = {}; // 新建book对象
-        book.id = e.detail.value.id;
-        book.name = e.detail.value.name;
-        book.isbn = e.detail.value.isbn;
-        book.authors = e.detail.value.authors;
-        book.press = e.detail.value.press;
-        book.price = e.detail.value.price;
-        book.memo = e.detail.value.meomo;
-        wx.setStorageSync('book'.book); // book使用同步
-
+        console.log(this.data.src);
         // 向服务器上传数据
         wx.uploadFile({
           filePath: this.data.src,
@@ -64,8 +55,9 @@ Page({
               name:e.detail.value.name,
               isbn:e.detail.value.isbn,
               authors:e.detail.value.authors,
-              press:e.detail.value.price,
-              memo:e.detail.value.meomo
+              press:e.detail.value.press,
+              price:e.detail.value.price,
+              memo:e.detail.value.meomo,
           },
           // 成功执行以下代码
           success:function(res){

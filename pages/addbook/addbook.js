@@ -2,7 +2,12 @@ const app = getApp()
 
 Page({
     data:{
-
+        text:'',
+        getInput:'',
+        content:'',
+    },
+    onLoad:function(){
+        let that = this;
     },
     // 识别文本框是否为空
     accountblur:function(e){
@@ -19,34 +24,40 @@ Page({
             })
         }
     },
+    getInput(e){
+        this.setData({
+            text:e.detail.value
+        })
+    },
     // 添加按钮功能
     formSubmit:function(e){
-        var id = {}; // 新建一个id对象
-        id.id = e.detail.id;
-        id.content = e.detail.content;
-        wx.setStorageSync('id', id); // id使用同步
-
+        console.log(this.data.content)
         // 向服务端上传数据
         wx.uploadFile({
           url: 'http://47.106.189.98:8899/bookcontent/add',
           header:{
             'content-type': 'Application/json'
           },
+          filePath:this.data.text,
+          name:'content',
           method:'post',
+          dataType:'json',
           formData:{
-              id:e.detail.value.id,
+              book_id:e.detail.value.id,
               content:e.detail.value.content
           },
           // 成功执行以下代码
           success:function(res){
+              console.log(res);
+              let data = JSON.parse(res.data);
+              console.log(data)
               console.log('上传成功');
           },
           // 错误返回
-          fail:function(res){
-              wx.showToast({
-                title: '错误',
-                icon:'error'
-              })
+          fail:function(error){
+              console.log(typeof(e.detail.value.content));
+              console.log(e.detail.value.content)
+              console.log(error);
           }
         })
     }
