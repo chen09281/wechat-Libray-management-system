@@ -24,9 +24,7 @@ Page({
     },
     // 查询按钮功能
     formSubmit: function (e) {
-        var id = {}; // 新建一个id对象
-        id.id = e.detail.id;
-        wx.setStorageSync('id', id); // id使用同步
+
 
         // 向服务端发送请求
         wx.request({

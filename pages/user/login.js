@@ -44,7 +44,7 @@ Page({
             title: '登陆成功',
             icon:'success'
           });
-
+          app.globalData.user_id = res.data[res.data.length-1].id;
           app.globalData.name = res.data[0].name;
           app.globalData.password = res.data[0].password;
           app.globalData.phone = res.data[0].phone;
@@ -54,7 +54,7 @@ Page({
           
           // 设置两秒后跳转
           setTimeout(function(){
-            console.log(app.globalData.user_id);
+            // console.log(app.globalData.user_id);
             wx.navigateTo({
               url: '../addnote/add',
             })

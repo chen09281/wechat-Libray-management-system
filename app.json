@@ -1,19 +1,14 @@
 {
   "pages": [
-    "pages/selsectbook/select",
-    "pages/select/book",
-    "pages/book/book",
-    "pages/newbook/newbook",
-    "pages/addbook/addbook",
-
-
-
-
-
-
+    "pages/selectnote/note",
+    "pages/selectuser/selectuser_id",
     "pages/user/login",
     "pages/addnote/add",
-
+    "pages/select/book",
+    "pages/addbook/addbook",
+    "pages/selsectbook/select",
+    "pages/book/book",
+    "pages/newbook/newbook",
     "pages/register/register",
     "pages/me/me",
     "pages/logs/logs"

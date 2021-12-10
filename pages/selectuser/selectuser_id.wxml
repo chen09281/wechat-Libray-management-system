@@ -1,0 +1,6 @@
+<form bindsubmit="formSubmit" bindreset="formReset">
+<view class="content">
+<input type="text" name="userid" placeholder="请输入用户id" />
+<button class="btn"disabled="{{disabled}}" type="{{btnstate}}" form-type="submit">查询</button>
+</view>
+</form>
